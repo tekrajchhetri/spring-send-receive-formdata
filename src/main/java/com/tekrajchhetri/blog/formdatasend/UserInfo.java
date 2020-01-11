@@ -3,16 +3,16 @@ package com.tekrajchhetri.blog.formdatasend;
 public class UserInfo {
     private String email;
     private int age;
-    private boolean isEmployed;
+    private boolean employed;
     private String gender;
 
     //empty constructor
     public UserInfo(){}
 
-    public UserInfo(String email, int age, boolean isEmployed, String gender) {
+    public UserInfo(String email, int age, boolean employed, String gender) {
         this.email = email;
         this.age = age;
-        this.isEmployed = isEmployed;
+        this.employed = employed;
         this.gender = gender;
     }
 
@@ -33,11 +33,11 @@ public class UserInfo {
     }
 
     public boolean isEmployed() {
-        return isEmployed;
+        return employed;
     }
 
     public void setEmployed(boolean employed) {
-        isEmployed = employed;
+        this.employed = employed;
     }
 
     public String getGender() {
