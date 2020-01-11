@@ -15,4 +15,36 @@ public class UserInfo {
         this.isEmployed = isEmployed;
         this.gender = gender;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean isEmployed() {
+        return isEmployed;
+    }
+
+    public void setEmployed(boolean employed) {
+        isEmployed = employed;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }
