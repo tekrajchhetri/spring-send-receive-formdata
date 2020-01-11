@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Tutorial - Sending Data From Browser</title>
+    <title>Spring Framework -- Create</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -12,20 +12,22 @@
 <body>
 
 <div class="jumbotron text-center">
-    <h1>Sending Data From Browser</h1>
-    <p>This tutorial teaches how to send data from this page to another html page once user submit the form.</p>
+    <h1>Spring Tutorial - Sending And Receiving Form Data</h1>
+    <p>This tutorial teaches to send and receive form data in another page.</p>
 </div>
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-8">
-            <h3>Retrieved Form Data Via Post</h3>
-           <ul>
-               <li>Email: <span th:text="${user.email}"></span></li>
 
-           </ul>
+        <div class="col-sm-12">
+            <ul>
+                <li> Email: <span th:text="${user?.email}"></span></li>
+                <li> Age: <span th:text="${user?.age}"></span></li>
+                <li>Employed: <span th:text="${user?.employed}"></span></li>
+                <li>Gender: <span th:text="${user?.gender}"></span></li>
+            </ul>
+
         </div>
-
 
     </div>
 </div>

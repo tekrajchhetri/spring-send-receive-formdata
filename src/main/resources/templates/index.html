@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Tutorial - Sending Data From Browser</title>
+    <title>Spring Framework</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -12,46 +12,46 @@
 <body>
 
 <div class="jumbotron text-center">
-    <h1>Sending Data From Browser</h1>
-    <p>This tutorial teaches how to send data from this page to another html page once user submit the form.</p>
+    <h1>Spring Tutorial - Sending And Receiving Form Data</h1>
+    <p>This tutorial teaches to send and receive form data in another page.</p>
 </div>
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-4">
+
+        <div class="col-sm-12">
             <h3>Form</h3>
-            <form action="/userdata" method="POST" th:object="${userInfo}">
+            <form action="/userdata" method="POST" th:object="${formdata}">
                 <div class="form-group">
                     <label for="email">Email address:</label>
-                    <input type="email" class="form-control" placeholder="Enter email" id="email" th:field="${userInfo.email}">
+                    <input type="email" class="form-control" placeholder="Enter email" id="email" th:field="${formdata.email}">
                 </div>
 
                 <div class="form-group">
                     <label for="age">Age:</label>
-                    <input type="number" class="form-control" placeholder="Enter age" th:field="${userInfo.age}" id="age">
+                    <input type="text" class="form-control" placeholder="Enter age" id="age" th:field="${formdata.age}">
                 </div>
 
                 <div class="form-group form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" th:field="${userInfo.employed}" th:value="true"> Employee
+                        <input class="form-check-input" type="checkbox" th:field="${formdata.employed}" th:value="true"}> Employee
                     </label>
                 </div>
 
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="gender" th:field="${userInfo.gender}" th:value="male">Male
+                        <input type="radio" class="form-check-input" name="gender" th:field="${formdata.gender}" th:value="male">Male
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="gender" th:field="${userInfo.gender}" th:value="female">Female
+                        <input type="radio" class="form-check-input" name="gender" th:field="${formdata.gender}" th:value="female">Female
                     </label>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-
 
     </div>
 </div>
