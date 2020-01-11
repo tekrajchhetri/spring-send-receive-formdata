@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-sm-4">
             <h3>Form</h3>
-            <form action="/user-info" method="POST" th:object="${userInfo}">
+            <form action="/userdata" method="POST" th:object="${userInfo}">
                 <div class="form-group">
                     <label for="email">Email address:</label>
                     <input type="email" class="form-control" placeholder="Enter email" id="email" th:field="${userInfo.email}">
