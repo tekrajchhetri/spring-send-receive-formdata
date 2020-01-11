@@ -1,15 +1,15 @@
 package com.tekrajchhetri.blog.formdatasend;
 
-public class UserInfo {
+public class User {
     private String email;
     private int age;
     private boolean employed;
     private String gender;
 
-    //empty constructor
-    public UserInfo(){}
+    public User(){}
 
-    public UserInfo(String email, int age, boolean employed, String gender) {
+    public User(String email, int age, boolean employed, String gender) {
+
         this.email = email;
         this.age = age;
         this.employed = employed;
