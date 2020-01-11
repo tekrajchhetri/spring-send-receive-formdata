@@ -20,31 +20,31 @@
     <div class="row">
         <div class="col-sm-4">
             <h3>Form</h3>
-            <form action="/userinfo" method="POST" th>
+            <form action="/user-info" method="POST" th:object="${userInfo}">
                 <div class="form-group">
                     <label for="email">Email address:</label>
-                    <input type="email" class="form-control" placeholder="Enter email" id="email">
+                    <input type="email" class="form-control" placeholder="Enter email" id="email" th:field="${userInfo.email}">
                 </div>
 
                 <div class="form-group">
                     <label for="age">Age:</label>
-                    <input type="number" class="form-control" placeholder="Enter age" id="age">
+                    <input type="number" class="form-control" placeholder="Enter age" th:field="${userInfo.age}" id="age">
                 </div>
 
                 <div class="form-group form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" th:value="true"> Employee
+                        <input class="form-check-input" type="checkbox" th:field="${userInfo.employed}" th:value="true"> Employee
                     </label>
                 </div>
 
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="gender" th:value="male">Male
+                        <input type="radio" class="form-check-input" name="gender" th:field="${userInfo.gender}" th:value="male">Male
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="gender"  th:value="female">Female
+                        <input type="radio" class="form-check-input" name="gender" th:field="${userInfo.gender}" th:value="female">Female
                     </label>
                 </div>
 
