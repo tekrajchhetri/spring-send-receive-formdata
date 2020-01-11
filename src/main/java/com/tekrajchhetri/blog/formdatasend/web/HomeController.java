@@ -4,6 +4,7 @@ import com.tekrajchhetri.blog.formdatasend.UserInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
@@ -12,5 +13,10 @@ public class HomeController {
     public String index(Model model){
         model.addAttribute("userInfo", new UserInfo());
         return "index";
+    }
+
+    @RequestMapping(value = "/user-info",method = RequestMethod.POST)
+    public String processForm(UserInfo userinfo){
+        return "show-form-data";
     }
 }
