@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Spring Tutorial - Sending Data From Browser</title>
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-sm-4">
             <h3>Form</h3>
-            <form action="/userinfo" method="POST" >
+            <form action="/userinfo" method="POST" th>
                 <div class="form-group">
                     <label for="email">Email address:</label>
                     <input type="email" class="form-control" placeholder="Enter email" id="email">
