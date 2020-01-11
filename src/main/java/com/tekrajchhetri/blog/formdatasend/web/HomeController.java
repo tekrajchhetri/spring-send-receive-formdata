@@ -17,6 +17,6 @@ public class HomeController {
 
     @RequestMapping(value = "/userdata",method = RequestMethod.POST)
     public String processForm(UserInfo user){
-        return "show-form-data";
+        return "userinfo";
     }
 }
